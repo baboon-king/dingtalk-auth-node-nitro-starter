@@ -12,5 +12,7 @@
     "nitropack": "latest",
     "prettier": "3.2.5"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@alicloud/dingtalk": "2.1.10"
+  }
 }
