@@ -11,12 +11,10 @@ export const useDingTalkAccessToken = async (appAuthInfo: DingTalkAppAuthInfo) =
   const get = () => storage.getItem(clientId);
 
   const getAndUpdate = async () => {
-    const currValue = await get();
-
-    if (!currValue || (await expire())) {
+    if (!(await get()) || (await expire())) {
       return update();
     }
-    return currValue;
+    return get();
   };
 
   const has = () => storage.hasItem(clientId);

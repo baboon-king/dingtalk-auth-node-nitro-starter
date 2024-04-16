@@ -1,5 +1,5 @@
 export interface Response<T = unknown> {
-  errcode: string;
+  errcode: number;
   result: T;
   errmsg: string;
   request_id: string;
